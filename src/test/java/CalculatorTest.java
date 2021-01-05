@@ -8,7 +8,7 @@ public class CalculatorTest {
     Calculator calculator;
 
     @Before
-    public void setUp() { calculator = new Calculator();}
+    public void setUp() { calculator = new Calculator(5.0, 2.0);}
 
     @Test
     public void canAdd(){
@@ -27,7 +27,6 @@ public class CalculatorTest {
 
     @Test
     public void canDivide(){
-        asserEquals(2.5, calculator.divideNumbers());
+        assertEquals(2.5, calculator.divideNumbers(), 0.01);
     }
-
 }
